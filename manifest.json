@@ -1,0 +1,30 @@
+{
+  "name": "cortex-plugin-healthcare-fhir",
+  "version": "1.0.0",
+  "description": "Healthcare FHIR Interoperability Agent — Epic/Cerner EHR integration for patient records, clinical summaries, HIPAA compliance",
+  "kind": "esm",
+  "entryPoint": "mod.ts",
+  "runtime": "deno",
+  "author": "CortexPrism",
+  "license": "MIT",
+  "repository": "https://github.com/CortexPrism/cortex-plugin-healthcare-fhir",
+  "homepage": "https://cortexprism.io/marketplace/plugins/healthcare-fhir",
+  "capabilities": ["tools", "network:fetch"],
+  "tools": [
+    { "name": "fhir_query_patient", "description": "Query patient records via FHIR", "params": [] },
+    { "name": "fhir_clinical_summary", "description": "Generate clinical summary", "params": [] },
+    {
+      "name": "fhir_check_interactions",
+      "description": "Check drug-drug interactions",
+      "params": []
+    },
+    {
+      "name": "fhir_compliance_audit",
+      "description": "Audit HIPAA compliance of data access",
+      "params": []
+    }
+  ],
+  "dependencies": {},
+  "peerDependencies": { "cortex": ">=1.0.0" },
+  "aiDisclosure": { "tools": ["Kilo (DeepSeek) — batch scaffold"], "humanReview": true }
+}
